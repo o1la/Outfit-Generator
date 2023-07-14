@@ -8,11 +8,10 @@ The Outfit Generator is a simple project designed to aid users in their everyday
 
 2. **Image Support**: Users can add images of their own clothes to the database. The images are stored efficiently as BLOBs in SQLite database.
 
-_ -- TO DO --
+_-- TO DO --
 3. **Outfit Generation**: The application can randomly generate outfits from the images stored in the database. It combines one image from each category (tops, bottoms, and shoes) to form a complete outfit.
 
-4. **User Control**: Users have control over the generated outfit. They can manually change individual items of the outfit and can browse through all available items in each category.
-_
+4. **User Control**: Users have control over the generated outfit. They can manually change individual items of the outfit and can browse through all available items in each category._
 
 ## How to Use
 
