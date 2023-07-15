@@ -14,7 +14,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Outfit Generator");
     setupDatabase();
+
+    ui->AddTop->setCursor(Qt::PointingHandCursor);
+    ui->AddBottom->setCursor(Qt::PointingHandCursor);
+    ui->AddShoes->setCursor(Qt::PointingHandCursor);
+    ui->generateOutfits->setCursor(Qt::PointingHandCursor);
 
     // Creating QHBoxLayout for Scroll Area
     QHBoxLayout *topsLayout = new QHBoxLayout;
@@ -88,17 +94,19 @@ void MainWindow::displayImages(const QString& tableName, QScrollArea* scrollArea
             // Conversion QByteArray to QPixmap
             QByteArray byteArray = query.value(0).toByteArray();
             QPixmap pixmap = QPixmap();
-            pixmap.loadFromData(byteArray, "PNG");
+            if(!pixmap.loadFromData(byteArray, "PNG")) {
+                qDebug() << "Failed to load image from database";
+            } else {
+                // Scalling QPixmap height to 230 pixels
+                pixmap = pixmap.scaledToHeight(230, Qt::SmoothTransformation);
 
-            // Scalling QPixmap height to 230 pixels
-            pixmap = pixmap.scaledToHeight(230, Qt::SmoothTransformation);
+                // Creating QLabel, to display QPixmap
+                QLabel* label = new QLabel;
+                label->setPixmap(pixmap);
 
-            // Creating QLabel, to display QPixmap
-            QLabel* label = new QLabel;
-            label->setPixmap(pixmap);
-
-            // Adding QLabel to Scroll Area
-            scrollArea->widget()->layout()->addWidget(label);
+                // Adding QLabel to Scroll Area
+                scrollArea->widget()->layout()->addWidget(label);
+            }
         }
     } else {
         qDebug() << "Error displaying image from database: ";
@@ -147,6 +155,9 @@ void MainWindow::on_AddShoes_clicked() {
 
 
 
-
-
+// Generate outfits window
+void MainWindow::on_generateOutfits_clicked() {
+    outfitsWindow = new outfits(this);
+    outfitsWindow->show();
+}
 

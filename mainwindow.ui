@@ -31,11 +31,40 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 106, 180);
-color: white;
-border: 1px;
-border-radius: 15px;
-font: 14pt &quot;Lucida Grande&quot;;
+     <string notr="true">QPushButton
+{
+	background-color: rgb(167, 109, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::hover
+{
+	background-color: rgb(167, 120, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(167, 110, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
 </string>
     </property>
     <property name="text">
@@ -52,11 +81,40 @@ font: 14pt &quot;Lucida Grande&quot;;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 106, 180);
-color: white;
-border: 1px;
-border-radius: 15px;
-font: 14pt &quot;Lucida Grande&quot;;
+     <string notr="true">QPushButton
+{
+	background-color: rgb(167, 109, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::hover
+{
+	background-color: rgb(167, 120, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(167, 110, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
 </string>
     </property>
     <property name="text">
@@ -73,17 +131,47 @@ font: 14pt &quot;Lucida Grande&quot;;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 106, 180);
-color: white;
-border: 1px;
-border-radius: 15px;
-font: 14pt &quot;Lucida Grande&quot;;</string>
+     <string notr="true">QPushButton
+{
+	background-color: rgb(167, 109, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::hover
+{
+	background-color: rgb(167, 120, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(167, 110, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+</string>
     </property>
     <property name="text">
      <string>Add Shoes</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="generateOutfits">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -93,11 +181,41 @@ font: 14pt &quot;Lucida Grande&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(200, 0, 80);
-color: white;
-border: 1px;
-border-radius: 15px;
-font: 14pt &quot;Lucida Grande&quot;;</string>
+     <string notr="true">QPushButton
+{
+	background-color: rgb(200, 0, 80);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::hover
+{
+	background-color: rgb(210, 0, 80);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(210, 0, 80);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+</string>
     </property>
     <property name="text">
      <string>Generate Outfit</string>

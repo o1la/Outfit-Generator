@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "outfits.h"
+
 #include <QMainWindow>
 
 #include <QSql>
@@ -33,7 +35,10 @@ private slots:
     void displayImages(const QString& tableName, QScrollArea* scrollArea);
     void clearScrollArea(QScrollArea* scrollArea);
 
+    void on_generateOutfits_clicked();
+
 private:
     Ui::MainWindow *ui;
+    outfits* outfitsWindow;
 };
 #endif // MAINWINDOW_H
