@@ -38,6 +38,8 @@ private slots:
     void on_generateOutfits_clicked();
     void clearScrollArea(QScrollArea* scrollArea);
 
+    void on_deletePhotos_clicked();
+
 private:
     Ui::MainWindow *ui;
     outfits* outfitsWindow;

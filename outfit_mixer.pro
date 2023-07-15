@@ -13,15 +13,18 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    outfits.cpp
+    outfits.cpp \
+    selectionwindow.cpp
 
 HEADERS += \
     mainwindow.h \
-    outfits.h
+    outfits.h \
+    selectionwindow.h
 
 FORMS += \
     mainwindow.ui \
-    outfits.ui
+    outfits.ui \
+    selectionwindow.ui
 
 LIBS += -lsqlite3
 

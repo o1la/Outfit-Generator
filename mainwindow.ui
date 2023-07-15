@@ -321,7 +321,7 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
 }</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Tops">
      <attribute name="title">
@@ -413,6 +413,56 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
       </widget>
      </widget>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="deletePhotos">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color: rgb(60, 36, 84);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 12pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::hover
+{
+	background-color: rgb(167, 120, 255);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(100, 100, 100);
+	color: #fff;
+	border-width: 1px;
+	border-radius: 15px;
+	border-color: #c196ff;
+	padding: 2px;
+	font: 14pt &quot;Lucida Grande&quot;;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Delete all photos</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

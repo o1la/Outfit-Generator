@@ -130,25 +130,28 @@ border: 0px</string>
     <string>➡️</string>
    </property>
   </widget>
-  <widget class="QLabel" name="topsView">
+  <widget class="QPushButton" name="topsView">
    <property name="geometry">
     <rect>
      <x>240</x>
      <y>30</y>
-     <width>181</width>
-     <height>211</height>
+     <width>191</width>
+     <height>231</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
   </widget>
-  <widget class="QLabel" name="bottomsVIew">
+  <widget class="QPushButton" name="bottomsView">
    <property name="geometry">
     <rect>
      <x>240</x>
      <y>260</y>
-     <width>181</width>
+     <width>191</width>
      <height>261</height>
     </rect>
    </property>
@@ -156,13 +159,13 @@ border: 0px</string>
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="shoesView">
+  <widget class="QPushButton" name="shoesView">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>540</y>
-     <width>201</width>
-     <height>121</height>
+     <x>240</x>
+     <y>520</y>
+     <width>191</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="text">

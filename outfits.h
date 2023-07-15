@@ -23,6 +23,7 @@ public:
 
 private:
     Ui::outfits *ui;
+    bool selectionInProgress = false;
 
     QVector<QPixmap> topsImages;
     QVector<QPixmap> bottomsImages;
@@ -37,6 +38,10 @@ private slots:
     void changeTop(int increment);
     void changeBottom(int increment);
     void changeShoe(int increment);
+
+    void on_topsView_clicked();
+    void on_bottomsView_clicked();
+    void on_shoesView_clicked();
 };
 
 #endif // OUTFITS_H

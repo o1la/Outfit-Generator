@@ -1,5 +1,6 @@
 #include "outfits.h"
 #include "ui_outfits.h"
+#include "selectionwindow.h"
 
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -15,7 +16,23 @@ outfits::outfits(QWidget *parent) :
     ui(new Ui::outfits)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Slay queen!");
+    this->setWindowTitle("");
+
+    // Flattening buttons
+    ui->topsView->setFlat(true);
+    ui->bottomsView->setFlat(true);
+    ui->shoesView->setFlat(true);
+
+    // Style cursor pointer
+    ui->topsView->setCursor(Qt::PointingHandCursor);
+    ui->bottomsView->setCursor(Qt::PointingHandCursor);
+    ui->shoesView->setCursor(Qt::PointingHandCursor);
+    ui->leftTops->setCursor(Qt::PointingHandCursor);
+    ui->rightTops->setCursor(Qt::PointingHandCursor);
+    ui->leftBottoms->setCursor(Qt::PointingHandCursor);
+    ui->rightBotttoms->setCursor(Qt::PointingHandCursor);
+    ui->leftShoes->setCursor(Qt::PointingHandCursor);
+    ui->rightShoes->setCursor(Qt::PointingHandCursor);
 
     // Load images
     loadImages("Tops", topsImages, 211);
@@ -30,22 +47,24 @@ outfits::outfits(QWidget *parent) :
     if (!shoesImages.empty())
         currentShoeIndex = QRandomGenerator::global()->bounded(shoesImages.size());
 
-
     // Display the initial images
     if (!topsImages.empty()) {
-        ui->topsView->setPixmap(topsImages[currentTopIndex]);
+        ui->topsView->setIcon(QIcon(topsImages[currentTopIndex]));
+        ui->topsView->setIconSize(topsImages[currentTopIndex].size()); // Set the size of the icon
     } else {
         qDebug() << "No tops images loaded.";
     }
 
     if (!bottomsImages.empty()) {
-        ui->bottomsVIew->setPixmap(bottomsImages[currentBottomIndex]);
+        ui->bottomsView->setIcon(QIcon(bottomsImages[currentBottomIndex]));
+        ui->bottomsView->setIconSize(bottomsImages[currentBottomIndex].size()); // Set the size of the icon
     } else {
         qDebug() << "No bottoms images loaded.";
     }
 
     if (!shoesImages.empty()) {
-        ui->shoesView->setPixmap(shoesImages[currentShoeIndex]);
+        ui->shoesView->setIcon(QIcon(shoesImages[currentShoeIndex]));
+        ui->shoesView->setIconSize(shoesImages[currentShoeIndex].size()); // Set the size of the icon
     } else {
         qDebug() << "No shoes images loaded.";
     }
@@ -95,7 +114,8 @@ void outfits::loadImages(const QString& tableName, QVector<QPixmap>& images, int
 void outfits::changeTop(int increment) {
     if (!topsImages.empty()) {
         currentTopIndex = (currentTopIndex + increment + topsImages.size()) % topsImages.size();
-        ui->topsView->setPixmap(topsImages[currentTopIndex]);
+        ui->topsView->setIcon(QIcon(topsImages[currentTopIndex]));
+        ui->topsView->setIconSize(topsImages[currentTopIndex].size());
     } else {
         qDebug() << "No tops images loaded.";
     }
@@ -104,7 +124,8 @@ void outfits::changeTop(int increment) {
 void outfits::changeBottom(int increment) {
     if (!bottomsImages.empty()) {
         currentBottomIndex = (currentBottomIndex + increment + bottomsImages.size()) % bottomsImages.size();
-        ui->bottomsVIew->setPixmap(bottomsImages[currentBottomIndex]);
+        ui->bottomsView->setIcon(QIcon(bottomsImages[currentBottomIndex]));
+        ui->bottomsView->setIconSize(bottomsImages[currentBottomIndex].size());
     } else {
         qDebug() << "No bottoms images loaded.";
     }
@@ -113,8 +134,43 @@ void outfits::changeBottom(int increment) {
 void outfits::changeShoe(int increment) {
     if (!shoesImages.empty()) {
         currentShoeIndex = (currentShoeIndex + increment + shoesImages.size()) % shoesImages.size();
-        ui->shoesView->setPixmap(shoesImages[currentShoeIndex]);
+        ui->shoesView->setIcon(QIcon(shoesImages[currentShoeIndex]));
+        ui->shoesView->setIconSize(shoesImages[currentShoeIndex].size());
     } else {
         qDebug() << "No shoes images loaded.";
     }
+}
+
+// Selecting clothes from all pics
+void outfits::on_topsView_clicked() {
+
+    auto *selectionWindow = new SelectionWindow(this->topsImages);
+    connect(selectionWindow, &SelectionWindow::itemSelected, this, [this](int index) {
+        currentTopIndex = index;
+        ui->topsView->setIcon(QIcon(topsImages[currentTopIndex]));
+        ui->topsView->setIconSize(topsImages[currentTopIndex].size());
+    });
+    selectionWindow->exec();
+}
+
+void outfits::on_bottomsView_clicked() {
+
+    auto *selectionWindow = new SelectionWindow(this->bottomsImages);
+    connect(selectionWindow, &SelectionWindow::itemSelected, this, [this](int index) {
+        currentBottomIndex = index;
+        ui->bottomsView->setIcon(QIcon(bottomsImages[currentBottomIndex]));
+        ui->bottomsView->setIconSize(bottomsImages[currentBottomIndex].size());
+    });
+    selectionWindow->exec();
+}
+
+void outfits::on_shoesView_clicked() {
+
+    auto *selectionWindow = new SelectionWindow(this->shoesImages);
+    connect(selectionWindow, &SelectionWindow::itemSelected, this, [this](int index) {
+        currentShoeIndex = index;
+        ui->shoesView->setIcon(QIcon(shoesImages[currentShoeIndex]));
+        ui->shoesView->setIconSize(shoesImages[currentShoeIndex].size());
+    });
+    selectionWindow->exec();
 }

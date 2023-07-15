@@ -34,12 +34,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->bottomsScrollArea->widget()->setLayout(bottomsLayout);
     ui->shoesScrollArea->widget()->setLayout(shoesLayout);
 
-    // Deleting previous images
-//    deleteAllImagesFromTable("Tops");
-//    deleteAllImagesFromTable("Bottoms");
-//    deleteAllImagesFromTable("Shoes");
-
-
     // Displaying existing images
     displayImages("Tops", ui->topsScrollArea);
     displayImages("Bottoms", ui->bottomsScrollArea);
@@ -119,7 +113,6 @@ void MainWindow::displayImages(const QString& tableName, QScrollArea* scrollArea
     } else {
         qDebug() << "Error displaying image from database: ";
     }
-
 }
 
 // DELETING old images
@@ -149,6 +142,9 @@ void MainWindow::on_AddTop_clicked() {
         insertImage("Tops", fileName);
         clearScrollArea(ui->topsScrollArea);
         displayImages("Tops", ui->topsScrollArea);
+
+        // Setting current open tab to tops
+        ui->tabWidget->setCurrentIndex(0);
     }
 }
 
@@ -157,8 +153,11 @@ void MainWindow::on_AddBottom_clicked() {
 
     if (!fileName.isEmpty()) {
         insertImage("Bottoms", fileName);
-         clearScrollArea(ui->bottomsScrollArea);
+        clearScrollArea(ui->bottomsScrollArea);
         displayImages("Bottoms", ui->bottomsScrollArea);
+
+        // Setting current open tab to bottoms
+        ui->tabWidget->setCurrentIndex(1);
     }
 }
 
@@ -169,14 +168,29 @@ void MainWindow::on_AddShoes_clicked() {
         insertImage("Shoes", fileName);
         clearScrollArea(ui->shoesScrollArea);
         displayImages("Shoes", ui->shoesScrollArea);
+
+        // Setting current open tab to shoes
+        ui->tabWidget->setCurrentIndex(2);
+
     }
 }
-
 
 
 // Generate outfits window
 void MainWindow::on_generateOutfits_clicked() {
     outfitsWindow = new outfits(this);
     outfitsWindow->show();
+}
+
+
+// Delete all photos
+void MainWindow::on_deletePhotos_clicked() {
+    deleteAllImagesFromTable("Tops");
+    deleteAllImagesFromTable("Bottoms");
+    deleteAllImagesFromTable("Shoes");
+
+    clearScrollArea(ui->topsScrollArea);
+    clearScrollArea(ui->bottomsScrollArea);
+    clearScrollArea(ui->shoesScrollArea);
 }
 
