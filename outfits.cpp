@@ -8,12 +8,14 @@
 #include <QHBoxLayout>
 #include <QLayout>
 #include <QLabel>
+#include <QRandomGenerator>
 
 outfits::outfits(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::outfits)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Slay queen!");
 
     // Load images
     loadImages("Tops", topsImages, 211);
@@ -21,9 +23,13 @@ outfits::outfits(QWidget *parent) :
     loadImages("Shoes", shoesImages, 121);
 
     // Initialize the current indexes
-    currentTopIndex = 0;
-    currentBottomIndex = 0;
-    currentShoeIndex = 0;
+    if (!topsImages.empty())
+        currentTopIndex = QRandomGenerator::global()->bounded(topsImages.size());
+    if (!bottomsImages.empty())
+        currentBottomIndex = QRandomGenerator::global()->bounded(bottomsImages.size());
+    if (!shoesImages.empty())
+        currentShoeIndex = QRandomGenerator::global()->bounded(shoesImages.size());
+
 
     // Display the initial images
     if (!topsImages.empty()) {
@@ -107,7 +113,7 @@ void outfits::changeBottom(int increment) {
 void outfits::changeShoe(int increment) {
     if (!shoesImages.empty()) {
         currentShoeIndex = (currentShoeIndex + increment + shoesImages.size()) % shoesImages.size();
-        ui->shoesView->setPixmap(bottomsImages[currentShoeIndex]);
+        ui->shoesView->setPixmap(shoesImages[currentShoeIndex]);
     } else {
         qDebug() << "No shoes images loaded.";
     }

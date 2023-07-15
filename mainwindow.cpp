@@ -17,10 +17,12 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowTitle("Outfit Generator");
     setupDatabase();
 
+    // Style cursor pointer
     ui->AddTop->setCursor(Qt::PointingHandCursor);
     ui->AddBottom->setCursor(Qt::PointingHandCursor);
     ui->AddShoes->setCursor(Qt::PointingHandCursor);
     ui->generateOutfits->setCursor(Qt::PointingHandCursor);
+    ui->tabWidget->setCursor(Qt::PointingHandCursor);
 
     // Creating QHBoxLayout for Scroll Area
     QHBoxLayout *topsLayout = new QHBoxLayout;
@@ -31,6 +33,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->topsScrollArea->widget()->setLayout(topsLayout);
     ui->bottomsScrollArea->widget()->setLayout(bottomsLayout);
     ui->shoesScrollArea->widget()->setLayout(shoesLayout);
+
+    // Deleting previous images
+//    deleteAllImagesFromTable("Tops");
+//    deleteAllImagesFromTable("Bottoms");
+//    deleteAllImagesFromTable("Shoes");
+
 
     // Displaying existing images
     displayImages("Tops", ui->topsScrollArea);
@@ -97,8 +105,8 @@ void MainWindow::displayImages(const QString& tableName, QScrollArea* scrollArea
             if(!pixmap.loadFromData(byteArray, "PNG")) {
                 qDebug() << "Failed to load image from database";
             } else {
-                // Scalling QPixmap height to 230 pixels
-                pixmap = pixmap.scaledToHeight(230, Qt::SmoothTransformation);
+                // Scalling QPixmap height to 220 pixels
+                pixmap = pixmap.scaledToHeight(220, Qt::SmoothTransformation);
 
                 // Creating QLabel, to display QPixmap
                 QLabel* label = new QLabel;
@@ -114,7 +122,15 @@ void MainWindow::displayImages(const QString& tableName, QScrollArea* scrollArea
 
 }
 
-// Deleting old images
+// DELETING old images
+void MainWindow::deleteAllImagesFromTable(const QString& tableName) {
+    QSqlQuery query;
+    query.prepare(QString("DELETE FROM %1").arg(tableName));
+    if (!query.exec()) {
+        qDebug() << "Error deleting images from database: ";
+    }
+}
+
 void MainWindow::clearScrollArea(QScrollArea* scrollArea) {
     QLayout* layout = scrollArea->widget()->layout();
     QLayoutItem* item;
@@ -131,6 +147,7 @@ void MainWindow::on_AddTop_clicked() {
 
     if (!fileName.isEmpty()) {
         insertImage("Tops", fileName);
+        clearScrollArea(ui->topsScrollArea);
         displayImages("Tops", ui->topsScrollArea);
     }
 }
@@ -140,6 +157,7 @@ void MainWindow::on_AddBottom_clicked() {
 
     if (!fileName.isEmpty()) {
         insertImage("Bottoms", fileName);
+         clearScrollArea(ui->bottomsScrollArea);
         displayImages("Bottoms", ui->bottomsScrollArea);
     }
 }
@@ -149,6 +167,7 @@ void MainWindow::on_AddShoes_clicked() {
 
     if (!fileName.isEmpty()) {
         insertImage("Shoes", fileName);
+        clearScrollArea(ui->shoesScrollArea);
         displayImages("Shoes", ui->shoesScrollArea);
     }
 }

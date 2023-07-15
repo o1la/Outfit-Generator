@@ -33,9 +33,10 @@ private slots:
 
     void insertImage(const QString& tableName, const QString& fileName);
     void displayImages(const QString& tableName, QScrollArea* scrollArea);
-    void clearScrollArea(QScrollArea* scrollArea);
+    void deleteAllImagesFromTable(const QString& tableName);
 
     void on_generateOutfits_clicked();
+    void clearScrollArea(QScrollArea* scrollArea);
 
 private:
     Ui::MainWindow *ui;
