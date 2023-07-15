@@ -25,4 +25,9 @@ _-- TO DO --
 - Qt 5.15 or later
 - SQLite 3
 
+## This is what it looks like for now! 😋
+![image](https://github.com/o1la/Outfit-Generator/assets/91129287/c8445698-2da8-4cd5-bc88-3c807a5cbbdc)
+![image](https://github.com/o1la/Outfit-Generator/assets/91129287/4e79731a-4069-4b7d-bd02-c0695efb3ea6)
+
+
 
