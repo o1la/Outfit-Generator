@@ -24,7 +24,6 @@ The Outfit Generator is a simple project designed to aid users in their everyday
 - Qt 5.15 or later
 - SQLite 3
 
-## This is what it looks like for now! 😋
-![image](https://github.com/o1la/Outfit-Generator/assets/91129287/7e610bef-9da8-490e-b141-fb15a08da334)
-![image](https://github.com/o1la/Outfit-Generator/assets/91129287/df019313-5f87-43fc-b20f-9ca0bccdf530)
+## Presentation!
 
+https://github.com/o1la/Outfit-Generator/assets/91129287/c2311da2-6478-4655-8e3d-d29b615c5878
