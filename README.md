@@ -10,7 +10,7 @@ The Outfit Generator is a simple project designed to aid users in their everyday
 
 3. **Outfit Generation**: The application can randomly generate outfits from the images stored in the database. It combines one image from each category (tops, bottoms, and shoes) to form a complete outfit.
 
-4. **User Control**: Users have control over the generated outfit. They can manually change individual items of the outfit _and can browse through all available items in each category._ <- TO DO! 
+4. **User Control**: Users have control over the generated outfit. They can manually change individual items of the outfit and can browse through all available items in each category.
 
 ## How to Use
 
@@ -25,8 +25,6 @@ The Outfit Generator is a simple project designed to aid users in their everyday
 - SQLite 3
 
 ## This is what it looks like for now! 😋
-![image](https://github.com/o1la/Outfit-Generator/assets/91129287/c8445698-2da8-4cd5-bc88-3c807a5cbbdc)
-![image](https://github.com/o1la/Outfit-Generator/assets/91129287/4e79731a-4069-4b7d-bd02-c0695efb3ea6)
-
-
+![image](https://github.com/o1la/Outfit-Generator/assets/91129287/7e610bef-9da8-490e-b141-fb15a08da334)
+![image](https://github.com/o1la/Outfit-Generator/assets/91129287/df019313-5f87-43fc-b20f-9ca0bccdf530)
 
