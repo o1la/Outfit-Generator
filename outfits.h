@@ -42,6 +42,7 @@ private slots:
     void on_topsView_clicked();
     void on_bottomsView_clicked();
     void on_shoesView_clicked();
+    void on_shuffleButton_clicked();
 };
 
 #endif // OUTFITS_H

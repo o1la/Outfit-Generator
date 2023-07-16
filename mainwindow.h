@@ -43,5 +43,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     outfits* outfitsWindow;
+    void loadFont();
 };
 #endif // MAINWINDOW_H

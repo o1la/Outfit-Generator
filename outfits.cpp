@@ -2,6 +2,9 @@
 #include "ui_outfits.h"
 #include "selectionwindow.h"
 
+#include <cstdlib>
+#include <ctime>
+
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QFileDialog>
@@ -78,6 +81,9 @@ outfits::outfits(QWidget *parent) :
 
     connect(ui->rightShoes, &QPushButton::clicked, this, [this] { changeShoe(1); });
     connect(ui->leftShoes, &QPushButton::clicked, this, [this] { changeShoe(-1); });
+
+    connect(ui->shuffleButton, &QPushButton::clicked, this, &outfits::on_shuffleButton_clicked);
+
 
 }
 
@@ -174,3 +180,28 @@ void outfits::on_shoesView_clicked() {
     });
     selectionWindow->exec();
 }
+
+void outfits::on_shuffleButton_clicked() {
+    // Seed the random number generator
+    srand(time(0));
+
+    if (!topsImages.empty()) {
+        int randomTopIndex = rand() % topsImages.size();
+        ui->topsView->setIcon(QIcon(topsImages[randomTopIndex]));
+        ui->topsView->setIconSize(topsImages[randomTopIndex].size());
+    }
+
+    if (!bottomsImages.empty()) {
+        int randomBottomIndex = rand() % bottomsImages.size();
+        ui->bottomsView->setIcon(QIcon(bottomsImages[randomBottomIndex]));
+        ui->bottomsView->setIconSize(bottomsImages[randomBottomIndex].size());
+    }
+
+    if (!shoesImages.empty()) {
+        int randomShoeIndex = rand() % shoesImages.size();
+        ui->shoesView->setIcon(QIcon(shoesImages[randomShoeIndex]));
+        ui->shoesView->setIconSize(shoesImages[randomShoeIndex].size());
+    }
+}
+
+

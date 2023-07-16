@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>664</width>
-    <height>689</height>
+    <width>663</width>
+    <height>693</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(239, 159, 183)</string>
+   <string notr="true">background-color: rgb(255, 206, 222)</string>
   </property>
   <widget class="QPushButton" name="rightBotttoms">
    <property name="geometry">
@@ -32,13 +32,24 @@ background-color: transparent;
 border: 0px</string>
    </property>
    <property name="text">
-    <string>➡️</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>right.png</normaloff>
+     <activeon>:/new/prefix1/right.png</activeon>right.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
    </property>
   </widget>
   <widget class="QPushButton" name="leftBottoms">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>130</x>
      <y>380</y>
      <width>100</width>
      <height>32</height>
@@ -51,14 +62,26 @@ background-color: transparent;
 border: 0px</string>
    </property>
    <property name="text">
-    <string>⬅️</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>left.png</normaloff>
+     <normalon>:/new/prefix1/left.png</normalon>
+     <activeon>:/new/prefix1/left.png</activeon>left.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
    </property>
   </widget>
   <widget class="QPushButton" name="leftTops">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>120</y>
+     <x>130</x>
+     <y>130</y>
      <width>100</width>
      <height>32</height>
     </rect>
@@ -70,14 +93,32 @@ background-color: transparent;
 border: 0px</string>
    </property>
    <property name="text">
-    <string>⬅️</string>
+    <string notr="true"/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>left.png</normaloff>
+     <normalon>:/new/prefix1/left.png</normalon>
+     <activeon>:/new/prefix1/left.png</activeon>left.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="rightTops">
    <property name="geometry">
     <rect>
      <x>440</x>
-     <y>120</y>
+     <y>130</y>
      <width>100</width>
      <height>32</height>
     </rect>
@@ -89,13 +130,28 @@ background-color: transparent;
 border: 0px</string>
    </property>
    <property name="text">
-    <string>➡️</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset theme="go-next" resource="right.qrc">
+     <normaloff>:/new/prefix1/right.png</normaloff>
+     <normalon>:/new/prefix1/right.png</normalon>
+     <activeon>:/new/prefix1/right.png</activeon>:/new/prefix1/right.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="leftShoes">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>130</x>
      <y>590</y>
      <width>100</width>
      <height>32</height>
@@ -108,7 +164,19 @@ background-color: transparent;
 border: 0px</string>
    </property>
    <property name="text">
-    <string>⬅️</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>left.png</normaloff>
+     <normalon>:/new/prefix1/left.png</normalon>
+     <activeon>:/new/prefix1/left.png</activeon>left.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
    </property>
   </widget>
   <widget class="QPushButton" name="rightShoes">
@@ -127,7 +195,19 @@ background-color: transparent;
 border: 0px</string>
    </property>
    <property name="text">
-    <string>➡️</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>right.png</normaloff>
+     <disabledoff>:/new/prefix1/right.png</disabledoff>
+     <activeon>:/new/prefix1/right.png</activeon>right.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
    </property>
   </widget>
   <widget class="QPushButton" name="topsView">
@@ -172,7 +252,57 @@ border: 0px</string>
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="shuffleButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	background: rgb(75, 190, 255);
+	color: #fff;
+	border: 2px solid black;
+	border-radius: 15px;
+	padding: 2px;
+	font: 14pt ;
+	font: 500 15pt &quot;Changa&quot;;
+}
+
+
+QPushButton::hover
+{
+	background-color: rgb(255, 57, 110);
+	color: #fff;
+	border: 2px solid black;
+	border-radius: 15px;
+	padding: 2px;
+	font: 14pt;
+}
+
+
+QPushButton::pressed
+{
+	background-color: rgb(255, 57, 115);
+	color: #fff;
+	border: 2px solid black;
+	border-radius: 15px;
+	padding: 2px;
+	font: 14pt;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Shuffle outfit!</string>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="right.qrc"/>
+ </resources>
  <connections/>
 </ui>

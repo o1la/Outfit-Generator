@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>684</width>
-    <height>431</height>
+    <width>825</width>
+    <height>541</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,15 +17,15 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(239, 159, 183)
+   <string notr="true">background-color: rgb(255, 206, 222)
 </string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="AddTop">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>80</y>
+      <x>50</x>
+      <y>150</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -33,37 +33,32 @@
     <property name="styleSheet">
      <string notr="true">QPushButton
 {
-	background-color: rgb(167, 109, 255);
+	background-color: rgb(255, 88, 164);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 500 14pt &quot;Changa&quot;;
 }
 
 
 QPushButton::hover
 {
-	background-color: rgb(167, 120, 255);
+	background-color: rgb(255, 145, 200);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
 }
 
 
 QPushButton::pressed
 {
-	background-color: rgb(167, 110, 255);
+	background-color: rgb(255, 145, 220);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
 }
 </string>
     </property>
@@ -74,8 +69,8 @@ QPushButton::pressed
    <widget class="QPushButton" name="AddBottom">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>150</y>
+      <x>50</x>
+      <y>220</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -83,37 +78,32 @@ QPushButton::pressed
     <property name="styleSheet">
      <string notr="true">QPushButton
 {
-	background-color: rgb(167, 109, 255);
+	background-color: rgb(255, 88, 164);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 500 14pt &quot;Changa&quot;;
 }
 
 
 QPushButton::hover
 {
-	background-color: rgb(167, 120, 255);
+	background-color: rgb(255, 145, 200);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
 }
 
 
 QPushButton::pressed
 {
-	background-color: rgb(167, 110, 255);
+	background-color: rgb(255, 145, 220);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
 }
 </string>
     </property>
@@ -124,8 +114,8 @@ QPushButton::pressed
    <widget class="QPushButton" name="AddShoes">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>220</y>
+      <x>50</x>
+      <y>290</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -133,37 +123,34 @@ QPushButton::pressed
     <property name="styleSheet">
      <string notr="true">QPushButton
 {
-	background-color: rgb(167, 109, 255);
+	background-color: rgb(255, 88, 164);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 500 14pt &quot;Changa&quot;;
 }
 
 
 QPushButton::hover
 {
-	background-color: rgb(167, 120, 255);
+	background-color: rgb(255, 145, 200);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 14pt;
 }
 
 
 QPushButton::pressed
 {
-	background-color: rgb(167, 110, 255);
+	background-color: rgb(255, 145, 220);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 14pt;
 }
 </string>
     </property>
@@ -174,88 +161,94 @@ QPushButton::pressed
    <widget class="QPushButton" name="generateOutfits">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>320</y>
+      <x>330</x>
+      <y>430</y>
       <width>131</width>
       <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Changa</family>
+      <pointsize>15</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">QPushButton
 {
-	background-color: rgb(200, 0, 80);
+	background: rgb(75, 190, 255);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 14pt ;
+	font: 500 15pt &quot;Changa&quot;;
 }
 
 
 QPushButton::hover
 {
-	background-color: rgb(210, 0, 80);
+	background-color: rgb(255, 57, 110);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 14pt;
 }
 
 
 QPushButton::pressed
 {
-	background-color: rgb(210, 0, 80);
+	background-color: rgb(255, 57, 115);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 14pt;
 }
 </string>
     </property>
     <property name="text">
-     <string>Generate Outfit</string>
+     <string>Generate Outfit!</string>
     </property>
    </widget>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>20</y>
-      <width>471</width>
-      <height>271</height>
+      <x>200</x>
+      <y>80</y>
+      <width>591</width>
+      <height>291</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QTabWidget::pane {
-    border: 1px solid black;
+    border: 2px solid black;
     background: rgb(255, 90, 129);
 }
 
 QTabWidget::tab-bar:top {
-    top: 1px;
+    top: 2px;
 }
 
 QTabWidget::tab-bar:bottom {
-    bottom: 1px;
+    bottom: 2px;
 }
 
 QTabWidget::tab-bar:left {
-    right: 1px;
+    right: 2px;
 }
 
 QTabWidget::tab-bar:right {
-    left: 1px;
+    left: 2px;
 }
 
 QTabBar::tab {
-    border: 1px solid black;
+    border: 2px solid black;
 	color: white;
-	font: 13px, &quot;Lucida Grande&quot;;
+	font: 500 13px &quot;Changa&quot;;
 }
 
 QTabBar::tab:selected {
@@ -280,7 +273,7 @@ QTabBar::tab:bottom:!selected {
 
 QTabBar::tab:top, QTabBar::tab:bottom {
     min-width: 8ex;
-    margin-right: -1px;
+    margin-right: -2px;
     padding: 5px 10px 5px 10px;
 }
 
@@ -303,7 +296,7 @@ QTabBar::tab:right:!selected {
 
 QTabBar::tab:left, QTabBar::tab:right {
     min-height: 8ex;
-    margin-bottom: -1px;
+    margin-bottom: -2px;
     padding: 10px 5px 10px 5px;
 }
 
@@ -331,10 +324,19 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
-        <width>471</width>
-        <height>241</height>
+        <y>-10</y>
+        <width>591</width>
+        <height>271</height>
        </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
@@ -344,8 +346,8 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>469</width>
-         <height>239</height>
+         <width>589</width>
+         <height>269</height>
         </rect>
        </property>
       </widget>
@@ -362,13 +364,19 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
-        <width>471</width>
-        <height>241</height>
+        <y>-10</y>
+        <width>591</width>
+        <height>271</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
-       <enum>Qt::ScrollBarAsNeeded</enum>
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
@@ -378,8 +386,8 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>469</width>
-         <height>239</height>
+         <width>589</width>
+         <height>269</height>
         </rect>
        </property>
       </widget>
@@ -393,10 +401,19 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
-        <width>471</width>
-        <height>241</height>
+        <y>-10</y>
+        <width>591</width>
+        <height>271</height>
        </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
       </property>
       <property name="widgetResizable">
        <bool>true</bool>
@@ -406,8 +423,8 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>469</width>
-         <height>239</height>
+         <width>589</width>
+         <height>269</height>
         </rect>
        </property>
       </widget>
@@ -417,46 +434,43 @@ QTabBar::tab:left:only-one, QTabBar::tab:right:only-one {
    <widget class="QPushButton" name="deletePhotos">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>340</y>
+      <x>670</x>
+      <y>30</y>
       <width>121</width>
-      <height>21</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton
 {
-	background-color: rgb(60, 36, 84);
+	background-color: rgb(255, 158, 200);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 12pt &quot;Lucida Grande&quot;;
+	font: 500 12pt &quot;Changa&quot;;
 }
 
 
 QPushButton::hover
 {
-	background-color: rgb(167, 120, 255);
+	background-color: rgb(255, 145, 200);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 14pt;
 }
 
 
 QPushButton::pressed
 {
-	background-color: rgb(100, 100, 100);
+	background-color: rgb(255, 145, 220);
 	color: #fff;
-	border-width: 1px;
+	border: 2px solid black;
 	border-radius: 15px;
-	border-color: #c196ff;
 	padding: 2px;
-	font: 14pt &quot;Lucida Grande&quot;;
+	font: 14pt;
 }
 </string>
     </property>
@@ -470,7 +484,7 @@ QPushButton::pressed
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>684</width>
+     <width>825</width>
      <height>22</height>
     </rect>
    </property>

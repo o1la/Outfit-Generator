@@ -8,6 +8,7 @@
 #include <QHBoxLayout>
 #include <QLayout>
 #include <QLabel>
+#include <QFontDatabase>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setWindowTitle("Outfit Generator");
     setupDatabase();
+    loadFont();
 
     // Style cursor pointer
     ui->AddTop->setCursor(Qt::PointingHandCursor);
@@ -69,6 +71,7 @@ void MainWindow::setupDatabase()
 
 // IMAGES
 void MainWindow::insertImage(const QString& tableName, const QString& fileName) {
+
     QPixmap pixmap(fileName);
 
     // Converting QPixmap to QByteArray
@@ -194,3 +197,16 @@ void MainWindow::on_deletePhotos_clicked() {
     clearScrollArea(ui->shoesScrollArea);
 }
 
+void MainWindow::loadFont()
+{
+    int fontId = QFontDatabase::addApplicationFont(":/Changa.ttf");
+    if (fontId != -1)
+    {
+        QStringList fontFamilies = QFontDatabase::applicationFontFamilies(fontId);
+        if (!fontFamilies.empty())
+        {
+            QFont font(fontFamilies.at(0), 12);
+            QApplication::setFont(font);
+        }
+    }
+}
